@@ -446,6 +446,7 @@ declare module 'next/dist/compiled/@opentelemetry/api' {
 }
 
 declare module 'next/dist/compiled/zod' {
+  // @ts-ignore
   import m from 'zod'
   export = m
 }

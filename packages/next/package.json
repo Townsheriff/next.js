@@ -1,11 +1,16 @@
 {
-  "name": "next",
+  "name": "@townsheriff/next",
   "version": "13.2.5-canary.0",
   "description": "The React Framework",
   "main": "./dist/server/next.js",
   "license": "MIT",
-  "repository": "vercel/next.js",
-  "bugs": "https://github.com/vercel/next.js/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vercel/next.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vercel/next.js/issues"
+  },
   "homepage": "https://nextjs.org",
   "types": "index.d.ts",
   "files": [
@@ -60,7 +65,7 @@
     "navigation-types"
   ],
   "bin": {
-    "next": "./dist/bin/next"
+    "next": "dist/bin/next"
   },
   "scripts": {
     "dev": "taskr",
@@ -70,7 +75,8 @@
     "types": "tsc --declaration --emitDeclarationOnly --stripInternal --declarationDir dist",
     "typescript": "tsec --noEmit",
     "ncc-compiled": "ncc cache clean && taskr ncc",
-    "test-pack": "cd ../../ && pnpm test-pack next"
+    "test-pack": "cd ../../ && pnpm test-pack next",
+    "start": "node server.js"
   },
   "taskr": {
     "requires": [
@@ -198,7 +204,7 @@
     "buffer": "5.6.0",
     "bytes": "3.1.1",
     "chalk": "2.4.2",
-    "ci-info": "watson/ci-info#f43f6a1cefff47fb361c88cf4b943fdbcaafe540",
+    "ci-info": "github:watson/ci-info#f43f6a1cefff47fb361c88cf4b943fdbcaafe540",
     "cli-select": "1.1.2",
     "client-only": "0.0.1",
     "comment-json": "3.0.3",
@@ -311,5 +317,6 @@
   },
   "engines": {
     "node": ">=14.6.0"
-  }
+  },
+  "author": ""
 }
